@@ -1,0 +1,26 @@
+extends ./_layouts-includes/_layout.jade
+
+block content
+  - for card in cards 
+    .card-sheet
+      .cutmark.lt
+      .cutmark.lb
+      .cutmark.rt
+      .cutmark.rb
+
+      .card.front
+        .name= card.name
+        .text= card.text
+        img(src="data:image/jpeg;base64,#{card.image}")
+
+
+      .card.back
+        | back
+
+
+
+
+
+
+  //- holds inline ui-lang and jquery
+  include ./_layouts-includes/_interaction.jade

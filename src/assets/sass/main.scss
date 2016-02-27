@@ -1,0 +1,26 @@
+@import "node_modules/ui-sketchbook/sasslib/sasslib";
+@include ui-sketchbook-defaults;
+// @import "./node_modules/semantic-ui-css/semantic.css"; // Semantic UI semantic-ui.com
+
+
+body {
+  padding-top: 5em;
+  color: $black;
+  text-align-last: 1; // this only exists to get an autoprefixer positive
+}
+
+.card-sheet {
+  height: 3.5in;
+  width: 5in;
+
+
+}
+
+.card {
+  height: 3.5in;
+  width: 2.5in;
+  background-color: $silver;
+  outline: 1px solid $black;
+  float: left;
+  overflow: hidden;
+}
