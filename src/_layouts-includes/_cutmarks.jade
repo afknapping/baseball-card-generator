@@ -1,0 +1,21 @@
+//- if i = 3n+1
+//- then it is the first of three: tl tr
+- if ( (i+1) % 3 == 1 )
+  .cutmark.top-left
+  .cutmark.top-right
+  .cutmark.top-center
+
+//- if i = 3n+2
+//- then it is the 2nd of three: l r
+- if ( (i+1) % 3 == 2 )
+  .cutmark.left
+  .cutmark.right
+
+//- if i = 3n
+//- 3rd of 3: bl br
+- if ( (i+1) % 3 == 0 )
+  .cutmark.left
+  .cutmark.right
+  .cutmark.bottom-left
+  .cutmark.bottom-right
+  .cutmark.bottom-center
