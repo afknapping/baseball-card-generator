@@ -4,23 +4,93 @@
 
 
 body {
-  padding-top: 5em;
+  // padding-top: 5em;
   color: $black;
   text-align-last: 1; // this only exists to get an autoprefixer positive
 }
 
-.card-sheet {
-  height: 3.5in;
-  width: 5in;
-
-
-}
+$card-height: 84mm;
+// $card-height: 65mm;
+$card-width: $card-height / 4 * 3;
+$cutmark-dimension: $card-height / 20;
+$cutmark-border: 1px dotted black;
 
 .card {
-  height: 3.5in;
-  width: 2.5in;
+  height: $card-height;
+  width: $card-width;
   background-color: $silver;
-  outline: 1px solid $black;
+  // outline: 1px solid $black;
   float: left;
   overflow: hidden;
 }
+
+.card-sheet {
+  height: $card-height;
+  width: $card-width * 2;
+  position: relative;
+  left: $cutmark-dimension;
+  top: $cutmark-dimension;
+  &:nth-of-type(3) {
+    margin-bottom: 1em;
+    page-break-after: always;
+    break-after: always;
+  }
+}
+
+
+
+.cutmark {
+width:  $cutmark-dimension;
+height: $cutmark-dimension;
+position: absolute;
+}
+
+
+.cutmark.top-left {
+ border-right: $cutmark-border;
+ border-bottom: $cutmark-border;
+ left: -$cutmark-dimension;
+ top: -$cutmark-dimension;
+}
+
+.cutmark.top-right {
+ border-left: $cutmark-border;
+ border-bottom: $cutmark-border;
+ right: -$cutmark-dimension;
+ top: -$cutmark-dimension;
+}
+
+.cutmark.left {
+ border-bottom: $cutmark-border;
+ left: -$cutmark-dimension;
+ top: -$cutmark-dimension;
+}
+
+.cutmark.right {
+ border-bottom: $cutmark-border;
+ right: -$cutmark-dimension;
+ top: -$cutmark-dimension;
+}
+
+.cutmark.bottom-left {
+ border-right: $cutmark-border;
+ border-top: $cutmark-border;
+ left: -$cutmark-dimension;
+ bottom: -$cutmark-dimension;
+}
+
+.cutmark.bottom-right {
+ border-left: $cutmark-border;
+ border-top: $cutmark-border;
+ right: -$cutmark-dimension;
+ bottom: -$cutmark-dimension;
+}
+
+
+/*
+
+left
+right
+bottom-left bottom-right
+
+*/
