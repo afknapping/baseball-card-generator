@@ -1,0 +1,17 @@
+{ "cards": [
+
+  {
+    "name": "Zebra",
+    "image": "zebra1.JPG"
+  },
+  {
+    "name": "Stern",
+    "image": "stern.jpg"
+  },
+  {
+    "name": "Vogel",
+    "image": "vogel.jpg"
+  }
+
+
+] }
